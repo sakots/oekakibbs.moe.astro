@@ -1,45 +1,58 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { boards } from '../data/boards';
+import { Icon } from 'astro-icon/components';
+
 ---
 
 <Layout title="SABRINA NO REITA | お絵かき掲示板">
-	<main>
-		<section class="hero" aria-labelledby="site-title">
-			<p class="eyebrow">OEKAKI BBS DIRECTORY</p>
-			<h1 id="site-title">SABRINA NO REITA</h1>
-			<p class="lead">お絵かきと会話を楽しむための掲示板です。</p>
-			<nav class="jump-links" aria-label="ページ内リンク">
-				<a href="#boards">掲示板一覧</a>
-				<a href="#about">このサイトについて</a>
-			</nav>
-		</section>
+  <main>
+    <section class="hero" aria-labelledby="site-title">
+      <p class="eyebrow">さこつ、お仕事募集中。</p>
+      <h1 id="site-title">SABRINA NO REITA</h1>
+      <p class="lead">お絵かき掲示板「noReita」の開発してます。</p>
+      <nav class="jump-links" aria-label="ページ内リンク">
+        <a href="#boards">掲示板一覧</a>
+        <a href="#about">このサイトとかについて</a>
+        <a href="#contact">お問い合わせ</a>
+				<a href="#link">リンク集（令和最新版）</a>
+      </nav>
+    </section>
 
-		<section id="boards" class="boards" aria-labelledby="boards-title">
-			<div class="section-heading">
-				<p class="eyebrow">BOARDS</p>
-				<h2 id="boards-title">掲示板一覧</h2>
-			</div>
+    <section id="boards" class="boards" aria-labelledby="boards-title">
+      <div class="section-heading">
+        <p class="eyebrow">BOARDS</p>
+        <h2 id="boards-title">掲示板ズ</h2>
+      </div>
 
-			<div class="board-grid">
-				{boards.map((board) => (
-					<article class="board-card">
-						<h3>{board.name}</h3>
-						<p>{board.description}</p>
-						<a class="board-link" href={board.href}>
-							掲示板を開く <span aria-hidden="true">→</span>
-						</a>
-					</article>
-				))}
-			</div>
-		</section>
+      <div class="board-grid">
+        {boards.map((board) => (
+          <article class="board-card">
+            <h3>{board.name}</h3>
+            <p>{board.description}</p>
+            <a class="board-link" href={board.href}>
+              掲示板を開く <span aria-hidden="true">→</span>
+            </a>
+          </article>
+        ))}
+      </div>
+    </section>
 
-		<section id="about" class="about" aria-labelledby="about-title">
-			<div class="section-heading">
-				<p class="eyebrow">ABOUT</p>
-				<h2 id="about-title">ご利用前に</h2>
-			</div>
-			<p>それぞれの掲示板のルールを守って、楽しくご利用ください。作品への感想や交流も歓迎です。</p>
-		</section>
-	</main>
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+      <div class="section-heading">
+        <p class="eyebrow">CONTACT</p>
+        <h2 id="contact-title">お問い合わせ</h2>
+      </div>
+      <p>ご意見・ご要望・不具合報告などは、<a href="https://twitter.com/sakotsu" target="_blank" rel="noopener noreferrer">Twitter</a>までお願いします。</p>
+    </section>
+
+    <section id="about" class="about" aria-labelledby="about-title">
+      <div class="section-heading">
+        <p class="eyebrow">ABOUT</p>
+        <h2 id="about-title">このサイトとかについて</h2>
+      </div>
+      <p>さこつだよー。</p>
+			<p><Icon name="simple-icons:niconico" title="ニコニコ" /></p>
+    </section>
+  </main>
 </Layout>

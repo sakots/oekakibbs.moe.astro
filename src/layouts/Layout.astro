@@ -2,7 +2,7 @@
 import '../css/main.css';
 
 interface Props {
-	title?: string;
+  title?: string;
 }
 
 const { title = 'SABRINA NO REITA' } = Astro.props;
@@ -10,24 +10,29 @@ const { title = 'SABRINA NO REITA' } = Astro.props;
 
 <!doctype html>
 <html lang="ja">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="description" content="お絵かきと会話を楽しむための掲示板一覧です。" />
-		<link rel="icon" href="/favicon.ico" sizes="any" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<div class="site-shell">
-			<header class="site-header">
-				<a class="site-name" href="/" aria-label="SABRINA NO REITA ホーム">SNR</a>
-				<p>お絵かき掲示板</p>
-			</header>
-			<slot />
-			<footer>
-				<p>© {new Date().getFullYear()} SABRINA NO REITA</p>
-			</footer>
-		</div>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="お絵かき掲示板「noReita」の開発とかサポートとか交流とかやってます。" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@rokuro_sakots">
+    <meta property="og:url" content="https://oekakibbs.moe/">
+    <meta property="og:title" content="SABRINA NO REITA - お絵かき掲示板サイト">
+    <meta property="og:description" content="お絵かき掲示板「noReita」の開発とかサポートとか交流とかやってます。">
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="site-name" href="/" aria-label="SABRINA NO REITA ホーム">サコ</a>
+        <p>なんやこれは！</p>
+      </header>
+      <slot />
+      <footer>
+        <p>© {new Date().getFullYear()} SABRINA NO REITA</p>
+      </footer>
+    </div>
+  </body>
 </html>

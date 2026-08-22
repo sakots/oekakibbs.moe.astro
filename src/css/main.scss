@@ -1,111 +1,157 @@
 @charset "UTF-8";
 /*! =====このcssファイルはsassから生成されています。===== */
 
-//設定ファイルの読み込み
 @import "color_conf";
 
-//iOS対策
-label {
-  cursor: pointer;
+* {
+  box-sizing: border-box;
 }
 
 html {
-  margin-right: 18%;
+  scroll-behavior: smooth;
 }
 
 body {
-  background-attachment: fixed;
-  background:
-    linear-gradient( #124, #010)
-    fixed;
-  color: #DCC;
-  width: 90%;
-  margin: auto auto;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(145deg, #07142d 0%, #10264a 52%, #07180f 100%) fixed;
+  color: #dcc;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  line-height: 1.8;
 }
 
-a:link {
+a {
   color: $link;
-}
-a:visited {
-  color: $link_visited;
-}
-a:active {
-  color: $link_active;
-}
-a:hover {
-  color: $link_hover;
+  text-underline-offset: 0.18em;
+
+  &:visited { color: $link; }
+  &:active { color: $link_active; }
+  &:hover { color: $link_hover; }
 }
 
-h1, h2 {
-  color: #EDD;
+.site-shell {
+  width: min(100% - 32px, 980px);
+  margin: 0 auto;
 }
+
+.site-header {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid rgba(220, 204, 204, 0.38);
+
+  p { margin: 0; font-size: 0.84rem; letter-spacing: 0.12em; }
+}
+
+.site-name {
+  display: inline-grid;
+  width: 2.2rem;
+  height: 2.2rem;
+  place-items: center;
+  color: #124;
+  background: #dcc;
+  font-family: Georgia, serif;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: -0.08em;
+  text-decoration: none;
+
+  &:visited, &:hover { color: #124; }
+}
+
+.hero {
+  padding: clamp(3.5rem, 12vw, 7rem) 0 clamp(3rem, 9vw, 5rem);
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  color: #9db7dc;
+  font-size: 0.72rem;
+  font-weight: bold;
+  letter-spacing: 0.18em;
+}
+
+h1, h2, h3 { line-height: 1.35; }
+
 h1 {
-  small {
-    font-size: small;
-    font-weight: normal;
-  }
+  margin: 0;
+  color: #f5e8e8;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.5rem, 8vw, 5.5rem);
+  font-weight: normal;
+  letter-spacing: 0.04em;
 }
 
-.contain {
+h2 {
+  margin: 0;
+  color: #edd;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.lead {
+  margin: 1.25rem 0 0;
+  font-size: clamp(1rem, 2vw, 1.15rem);
+}
+
+.jump-links {
   display: flex;
   flex-wrap: wrap;
-  > div {
-    width: 300px;
-    margin: 1ex;
-    h3 {
-      width: 100%;
-      background: #DCC;
-      color: #124;
-      margin-bottom: 0;
-      &::before {
-        content: "・";
-      }
-    }
-    p {
-      margin: 0;
-    }
-    img {
-      width: 300px;
-      width: 300px;
-      object-fit: cover;
-    }
-  }
+  gap: 1rem 1.5rem;
+  margin-top: 2rem;
 }
+
+.boards, .about {
+  padding: clamp(2.5rem, 7vw, 4.5rem) 0;
+  border-top: 1px solid rgba(220, 204, 204, 0.38);
+}
+
+.section-heading { margin-bottom: 1.8rem; }
+
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  gap: 1rem;
+}
+
+.board-card {
+  display: flex;
+  min-height: 220px;
+  flex-direction: column;
+  padding: 1.45rem;
+  background: rgba(1, 10, 28, 0.52);
+  border: 1px solid rgba(220, 204, 204, 0.45);
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.18);
+
+  h3 {
+    margin: 0;
+    color: #f5e8e8;
+    font-size: 1.15rem;
+  }
+
+  p { margin: 0.85rem 0 1.4rem; }
+}
+
+.board-link {
+  margin-top: auto;
+  font-weight: bold;
+}
+
+.about p { max-width: 42rem; margin-bottom: 0; }
 
 footer {
-  margin-top: 2em;
+  margin-top: 1rem;
+  padding: 1.5rem 0 2rem;
   border-top: 1px solid $border_color_1;
+  color: #b9aeae;
+  font-size: 0.78rem;
   text-align: right;
-  font-size: smaller;
-  p {
-    margin-bottom: 0;
-  }
-  address {
-    font-style: normal;
-  }
+
+  p { margin: 0; }
 }
 
-.counter {
-  margin: 0;
-}
-
-.counter-frame {
-  display: inline-block;
-  padding: 3px;
-  line-height: 0;
-  background: #bdbdbd;
-  border: 1px solid #111;
-  box-shadow:
-  inset 2px 2px 0 #fff,
-  inset -2px -2px 0 #555,
-  1px 1px 0 #111;
-}
-
-.counter-image {
-  display: inline-block;
-  width: auto;
-  height: 30px;
-  background: #090;
-  border: 2px solid;
-  border-color: #555 #eee #eee #555;
+@media (max-width: 480px) {
+  .site-shell { width: min(100% - 24px, 980px); }
+  .board-card { min-height: 0; }
 }

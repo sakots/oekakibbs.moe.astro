@@ -1,11 +1,45 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import { boards } from '../data/boards';
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="SABRINA NO REITA | お絵かき掲示板">
+	<main>
+		<section class="hero" aria-labelledby="site-title">
+			<p class="eyebrow">OEKAKI BBS DIRECTORY</p>
+			<h1 id="site-title">SABRINA NO REITA</h1>
+			<p class="lead">お絵かきと会話を楽しむための掲示板です。</p>
+			<nav class="jump-links" aria-label="ページ内リンク">
+				<a href="#boards">掲示板一覧</a>
+				<a href="#about">このサイトについて</a>
+			</nav>
+		</section>
+
+		<section id="boards" class="boards" aria-labelledby="boards-title">
+			<div class="section-heading">
+				<p class="eyebrow">BOARDS</p>
+				<h2 id="boards-title">掲示板一覧</h2>
+			</div>
+
+			<div class="board-grid">
+				{boards.map((board) => (
+					<article class="board-card">
+						<h3>{board.name}</h3>
+						<p>{board.description}</p>
+						<a class="board-link" href={board.href}>
+							掲示板を開く <span aria-hidden="true">→</span>
+						</a>
+					</article>
+				))}
+			</div>
+		</section>
+
+		<section id="about" class="about" aria-labelledby="about-title">
+			<div class="section-heading">
+				<p class="eyebrow">ABOUT</p>
+				<h2 id="about-title">ご利用前に</h2>
+			</div>
+			<p>それぞれの掲示板のルールを守って、楽しくご利用ください。作品への感想や交流も歓迎です。</p>
+		</section>
+	</main>
 </Layout>

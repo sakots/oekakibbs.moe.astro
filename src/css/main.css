@@ -1,0 +1,105 @@
+@charset "UTF-8";
+/*! =====このcssファイルはsassから生成されています。===== */
+label {
+  cursor: pointer;
+}
+
+html {
+  margin-right: 18%;
+}
+
+body {
+  background-attachment: fixed;
+  background: linear-gradient(#124, #010) fixed;
+  color: #DCC;
+  width: 90%;
+  margin: auto auto;
+}
+
+a:link {
+  color: #27F;
+}
+
+a:visited {
+  color: #777;
+}
+
+a:active {
+  color: #C33;
+}
+
+a:hover {
+  color: #C33;
+}
+
+h1, h2 {
+  color: #EDD;
+}
+
+h1 small {
+  font-size: small;
+  font-weight: normal;
+}
+
+.contain {
+  display: flex;
+  flex-wrap: wrap;
+}
+.contain > div {
+  width: 300px;
+  margin: 1ex;
+}
+.contain > div h3 {
+  width: 100%;
+  background: #DCC;
+  color: #124;
+  margin-bottom: 0;
+}
+.contain > div h3::before {
+  content: "・";
+}
+.contain > div p {
+  margin: 0;
+}
+.contain > div img {
+  width: 300px;
+  width: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+footer {
+  margin-top: 2em;
+  border-top: 1px solid #A00;
+  text-align: right;
+  font-size: smaller;
+}
+footer p {
+  margin-bottom: 0;
+}
+footer address {
+  font-style: normal;
+}
+
+.counter {
+  margin: 0;
+}
+
+.counter-frame {
+  display: inline-block;
+  padding: 3px;
+  line-height: 0;
+  background: #bdbdbd;
+  border: 1px solid #111;
+  box-shadow: inset 2px 2px 0 #fff, inset -2px -2px 0 #555, 1px 1px 0 #111;
+}
+
+.counter-image {
+  display: inline-block;
+  width: auto;
+  height: 30px;
+  background: #090;
+  border: 2px solid;
+  border-color: #555 #eee #eee #555;
+}
+/*# sourceMappingURL=main.css.map */

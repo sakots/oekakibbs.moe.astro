@@ -1,5 +1,6 @@
 ---
 import '../css/main.css';
+import { counters } from '../data/counters';
 
 interface Props {
   title?: string;
@@ -33,6 +34,16 @@ const { title = 'SABRINA NO REITA' } = Astro.props;
       <slot />
       <footer>
         <p>© {new Date().getFullYear()} SABRINA NO REITA</p>
+        <div class="counter-list" aria-label="アクセスカウンター">
+          {counters.map((counter) => (
+            <span class="counter-item">
+              <span class="counter-label">{counter.label}</span>
+              <span class="counter-frame">
+                <img class="counter-image" src={counter.image} alt={counter.alt} />
+              </span>
+            </span>
+          ))}
+        </div>
       </footer>
     </div>
   </body>

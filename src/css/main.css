@@ -237,6 +237,44 @@ footer p {
   margin: 0;
 }
 
+.counter-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.5rem 0.9rem;
+  margin-top: 0.75rem;
+}
+
+.counter-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.counter-label {
+  color: #b9aeae;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.68rem;
+}
+
+.counter-frame {
+  display: inline-block;
+  padding: 3px;
+  line-height: 0;
+  background: #bdbdbd;
+  border: 1px solid #111;
+  box-shadow: inset 2px 2px 0 #fff, inset -2px -2px 0 #555, 1px 1px 0 #111;
+}
+
+.counter-image {
+  display: block;
+  width: auto;
+  height: 30px;
+  background: #090;
+  border: 2px solid;
+  border-color: #555 #eee #eee #555;
+}
+
 @media (max-width: 480px) {
   .site-shell {
     width: min(100% - 24px, 980px);

@@ -173,4 +173,19 @@ footer p {
     min-height: 0;
   }
 }
+.social-links svg {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  vertical-align: -0.125em;
+}
+.social-links a {
+  color: #dcc;
+}
+.social-links a:active {
+  color: #C33;
+}
+.social-links a:hover {
+  color: #C33;
+}
 /*# sourceMappingURL=main.css.map */

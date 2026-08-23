@@ -15,7 +15,7 @@ import { Icon } from 'astro-icon/components';
         <a href="#boards">掲示板一覧</a>
         <a href="#about">このサイトとかについて</a>
         <a href="#contact">お問い合わせ</a>
-				<a href="#link">リンク集（令和最新版）</a>
+        <a href="#link">リンク集（令和最新版）</a>
       </nav>
     </section>
 
@@ -43,7 +43,7 @@ import { Icon } from 'astro-icon/components';
         <p class="eyebrow">CONTACT</p>
         <h2 id="contact-title">お問い合わせ</h2>
       </div>
-      <p>ご意見・ご要望・不具合報告などは、<a href="https://twitter.com/sakotsu" target="_blank" rel="noopener noreferrer">Twitter</a>までお願いします。</p>
+      <p>ご意見・ご要望・不具合報告などは掲示板にお願いします。</p>
     </section>
 
     <section id="about" class="about" aria-labelledby="about-title">
@@ -52,7 +52,26 @@ import { Icon } from 'astro-icon/components';
         <h2 id="about-title">このサイトとかについて</h2>
       </div>
       <p>さこつだよー。</p>
-			<p><Icon name="simple-icons:niconico" title="ニコニコ" /></p>
+      <p class="social-links">
+        <a href="https://www.nicovideo.jp/user/56971512" target="_blank" rel="noopener noreferrer">
+          <Icon name="streamline-logos:niconico-logo-2" title="ニコニコ" />
+        </a>
+        <a href="https://manga.nicovideo.jp/search?q=%E3%82%B5%E9%AA%A8" target="_blank" rel="noopener noreferrer">
+          <Icon name="arcticons:niconico-manga" title="ニコニコ漫画" />
+        </a>
+        <a href="https://twitter.com/@rokuro_sakots" target="_blank" rel="noopener noreferrer">
+          <Icon name="arcticons:x-twitter" title="Twitter" />
+        </a>
+        <a href="https://misskey.io/@352696" target="_blank" rel="noopener noreferrer">
+          <Icon name="simple-icons:misskey" title="misskey.io" />
+        </a>
+        <a href="https://www.pixiv.net/users/12645" target="_blank" rel="noopener noreferrer">
+          <Icon name="arcticons:pixiv" title="Pixiv" />
+        </a>
+        <a href="https://github.com/sakots" target="_blank" rel="noopener noreferrer">
+          <Icon name="simple-icons:github" title="Github" />
+        </a>
+      </p>
     </section>
   </main>
 </Layout>

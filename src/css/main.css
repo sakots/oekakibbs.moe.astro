@@ -110,7 +110,7 @@ h2 {
   margin-top: 2rem;
 }
 
-.boards, .about {
+.boards, .links, .contact, .about {
   padding: clamp(2.5rem, 7vw, 4.5rem) 0;
   border-top: 1px solid rgba(220, 204, 204, 0.38);
 }
@@ -148,6 +148,49 @@ h2 {
   font-weight: bold;
 }
 
+.link-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.link-card {
+  display: grid;
+  grid-template-columns: minmax(120px, 200px) 1fr;
+  gap: 1.25rem;
+  align-items: start;
+  padding: 1.25rem;
+  background: rgba(1, 10, 28, 0.52);
+  border: 1px solid rgba(220, 204, 204, 0.45);
+}
+.link-card p {
+  margin: 0;
+}
+
+.banner-link {
+  display: block;
+  line-height: 0;
+}
+.banner-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.link-details {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.link-admin {
+  color: #f5e8e8;
+  font-weight: bold;
+}
+
+.empty-links {
+  margin: 0;
+  color: #b9aeae;
+}
+
 .about p {
   max-width: 42rem;
   margin-bottom: 0;
@@ -171,6 +214,12 @@ footer p {
   }
   .board-card {
     min-height: 0;
+  }
+  .link-card {
+    grid-template-columns: 1fr;
+  }
+  .banner-link {
+    max-width: 200px;
   }
 }
 .social-links svg {

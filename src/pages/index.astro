@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { boards } from '../data/boards';
+import { links } from '../data/links';
 import { Icon } from 'astro-icon/components';
 
 ---
@@ -13,9 +14,10 @@ import { Icon } from 'astro-icon/components';
       <p class="lead">お絵かき掲示板「noReita」の開発してます。</p>
       <nav class="jump-links" aria-label="ページ内リンク">
         <a href="#boards">掲示板一覧</a>
+        <a href="#link">リンク集（令和最新版）</a>
         <a href="#about">このサイトとかについて</a>
         <a href="#contact">お問い合わせ</a>
-        <a href="#link">リンク集（令和最新版）</a>
+        <a href="#about">ABOUT</a>
       </nav>
     </section>
 
@@ -38,6 +40,46 @@ import { Icon } from 'astro-icon/components';
       </div>
     </section>
 
+    <section id="link" class="links" aria-labelledby="link-title">
+      <div class="section-heading">
+        <p class="eyebrow">LINK</p>
+        <h2 id="link-title">リンク集（令和最新版）</h2>
+      </div>
+      {
+        links.length > 0 ? (
+          <div class="link-list">
+            {links.map((link) => (
+              <article class="link-card">
+                <a class="banner-link" href={link.url} target="_blank" rel="noopener noreferrer">
+                  <img src={link.banner} alt={`${link.admin}さんのサイト`} loading="lazy" decoding="async" />
+                </a>
+                <div class="link-details">
+                  <p class="link-admin">管理者：{link.admin}</p>
+                  <p>{link.description}</p>
+                  <a href={link.url} target="_blank" rel="noopener noreferrer">サイトを開く <span aria-hidden="true">→</span></a>
+                </div>
+              </article>
+            ))}
+          </div>
+        ) : (
+          <p class="empty-links">リンクは準備中です。</p>
+        )
+      }
+      <div class="link-note">
+        <p>
+          リンク集は随時更新されます。令和の今こそ相互リンク希望の方は掲示板にてご連絡ください。
+        </p>
+        <p>バナーは以下を貼り付けてください。直リンクだとたのしいね！</p>
+        <pre class="banner-code">
+          <code>
+            &lt;a href=&quot;https://oekakibbs.moe/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;
+              &lt;img src=&quot;https://oekakibbs.moe/img/reita_random.php&quot; alt=&quot;SABRINA NO REITA&quot; /&gt;
+            &lt;/a&gt;
+          </code>
+        </pre>
+      </div>
+    </section>
+
     <section id="contact" class="contact" aria-labelledby="contact-title">
       <div class="section-heading">
         <p class="eyebrow">CONTACT</p>
@@ -49,9 +91,8 @@ import { Icon } from 'astro-icon/components';
     <section id="about" class="about" aria-labelledby="about-title">
       <div class="section-heading">
         <p class="eyebrow">ABOUT</p>
-        <h2 id="about-title">このサイトとかについて</h2>
+        <h2 id="about-title">さこつだよー</h2>
       </div>
-      <p>さこつだよー。</p>
       <p class="social-links">
         <a href="https://www.nicovideo.jp/user/56971512" target="_blank" rel="noopener noreferrer">
           <Icon name="streamline-logos:niconico-logo-2" title="ニコニコ" />

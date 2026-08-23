@@ -17,7 +17,7 @@ export const boards: Board[] = [
   },
   {
     name: 'SQL避難所',
-    description: 'データベース移行時などに利用する掲示板です。',
+    description: 'ふたばSQLが荒れた時の避難所。',
     href: '/bbs/eurasia/',
     banner: 'https://oekakibbs.moe/bbs/eurasia/noreita_newimg.php',
   },

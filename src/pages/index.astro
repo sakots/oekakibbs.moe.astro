@@ -30,6 +30,9 @@ import { Icon } from 'astro-icon/components';
       <div class="board-grid">
         {boards.map((board) => (
           <article class="board-card">
+            <a class="board-banner" href={board.href}>
+              <img src={board.banner} alt={`${board.name} のバナー`} loading="lazy" decoding="async" />
+            </a>
             <h3>{board.name}</h3>
             <p>{board.description}</p>
             <a class="board-link" href={board.href}>

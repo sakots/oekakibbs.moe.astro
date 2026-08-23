@@ -163,6 +163,23 @@ pre {
   p { margin: 0.85rem 0 1.4rem; }
 }
 
+.board-banner {
+  display: block;
+  margin: -1.45rem -1.45rem 1rem;
+  overflow: hidden;
+  line-height: 0;
+
+  img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    transition: transform 0.2s ease;
+  }
+
+  &:hover img { transform: scale(1.03); }
+}
+
 .board-link {
   margin-top: auto;
   font-weight: bold;

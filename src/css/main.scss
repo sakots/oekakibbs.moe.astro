@@ -132,7 +132,7 @@ pre {
   margin-top: 2rem;
 }
 
-.boards, .links, .contact, .about {
+.boards, .works, .links, .contact, .about {
   padding: clamp(2.5rem, 7vw, 4.5rem) 0;
   border-top: 1px solid rgba(220, 204, 204, 0.38);
 }
@@ -181,6 +181,37 @@ pre {
 }
 
 .board-link {
+  margin-top: auto;
+  font-weight: bold;
+}
+
+.works-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.work-card {
+  display: flex;
+  min-height: 180px;
+  flex-direction: column;
+  padding: 1.45rem;
+  background: rgba(1, 10, 28, 0.52);
+  border: 1px solid rgba(220, 204, 204, 0.45);
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.18);
+
+  h3 {
+    margin: 0;
+    font-size: 1.15rem;
+  }
+
+  p { margin: 0.85rem 0 1.4rem; }
+}
+
+.work-link {
   margin-top: auto;
   font-weight: bold;
 }

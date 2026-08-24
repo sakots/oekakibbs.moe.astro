@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import { boards } from '../data/boards';
 import { links } from '../data/links';
+import { works } from '../data/works';
 import { Icon } from 'astro-icon/components';
 
 ---
@@ -14,6 +15,7 @@ import { Icon } from 'astro-icon/components';
       <p class="lead">お絵かき掲示板「noReita」の開発してます。</p>
       <nav class="jump-links" aria-label="ページ内リンク">
         <a href="#boards">掲示板一覧</a>
+        <a href="#works">作ったもの</a>
         <a href="#link">リンク集（令和最新版）</a>
         <a href="#about">このサイトとかについて</a>
         <a href="#contact">お問い合わせ</a>
@@ -41,6 +43,22 @@ import { Icon } from 'astro-icon/components';
           </article>
         ))}
       </div>
+    </section>
+
+    <section id="works" class="works" aria-labelledby="works-title">
+      <div class="section-heading">
+        <p class="eyebrow">WORKS</p>
+        <h2 id="works-title">作ったもの</h2>
+      </div>
+      <ul class="works-list">
+        {works.map((work) => (
+          <li class="work-card">
+            <h3><a href={work.url} target="_blank" rel="noopener noreferrer">{work.name}</a></h3>
+            <p>{work.description}</p>
+            <a class="work-link" href={work.url} target="_blank" rel="noopener noreferrer">詳しく見る <span aria-hidden="true">→</span></a>
+          </li>
+        ))}
+      </ul>
     </section>
 
     <section id="link" class="links" aria-labelledby="link-title">

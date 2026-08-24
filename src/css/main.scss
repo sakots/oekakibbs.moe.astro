@@ -125,6 +125,17 @@ pre {
   font-size: clamp(1rem, 2vw, 1.15rem);
 }
 
+.release-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-left: 0.35rem;
+  vertical-align: middle;
+
+  a { display: block; line-height: 0; }
+  img { display: block; height: 20px; }
+}
+
 .jump-links {
   display: flex;
   flex-wrap: wrap;

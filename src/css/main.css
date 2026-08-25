@@ -276,7 +276,9 @@ pre code {
 }
 
 .link-admin {
+  margin: 0;
   color: #f5e8e8;
+  font-size: 1rem;
   font-weight: bold;
 }
 

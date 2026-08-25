@@ -34,7 +34,7 @@ const { title = 'SABRINA NO REITA' } = Astro.props;
       <slot />
       <footer>
         <p>© {new Date().getFullYear()} SABRINA NO REITA</p>
-        <div class="counter-list" aria-label="アクセスカウンター">
+        <div class="counter-list" role="group" aria-label="アクセスカウンター">
           {counters.map((counter) => (
             <span class="counter-item">
               <span class="counter-label">{counter.label}</span>

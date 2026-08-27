@@ -8,6 +8,15 @@ import { Icon } from 'astro-icon/components';
 ---
 
 <Layout title="SABRINA NO REITA | お絵かき掲示板">
+  <!-- Google Analytics: このブロックへGoogleの定型コードを貼り付けます。 -->
+  <script slot="head" is:inline async src="https://www.googletagmanager.com/gtag/js?id=GT-NNM9P832"></script>
+  <script slot="head" is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'GT-NNM9P832');
+  </script>
   <main>
     <section class="hero" aria-labelledby="site-title">
       <p class="eyebrow">さこつ、お仕事募集中。</p>
